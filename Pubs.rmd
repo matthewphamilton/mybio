@@ -1,0 +1,60 @@
+---
+title: "R Notebook"
+output:
+  bookdown::word_document2: 
+    fig_caption: TRUE
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+```{r echo=FALSE, message = FALSE,warning=FALSE}
+library(knitr)
+library(magrittr)
+options(kableExtra.auto_format = FALSE)
+```
+
+```{r include=F}
+# cits_tb <-rorcid::works(rorcid::as.orcid("0000-0001-7407-9194"))
+# cits_tb %>% dplyr::select(title.title.value,`publication-date.year.value`,`journal-title.value`) %>% kableExtra::kable()
+accepted_tb <- tibble::tibble(Title = c("Identification and Management of Psoriasis Associated Co-MorbidiTy: The IMPACT Research Programme^"),
+                              Author = c("L Cordingley, PA Nelson, L Davies, D Ashcroft, C Bundy, C Chew-Graham, A Chisholm, J Elvidge, M Hamilton, R Hilton, K Kane, C Keyworth, A Littlewood, K Lovell, M Lunt, H McAteer, D Ntais, R Parisi, C Pearce, M Rutter, D Symmons, H Young  & CEM Griffiths"),
+                              Journal = c("Programme Grants Appl Res"),
+                              Year = 2020,
+                              Citations = 0)
+published_tb <- scholar::get_publications("t1ZHrCoAAAAJ") %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(!pubid %in% c("IjCSPb-OGe4C","0EnyYjriUFMC","kNdYIx-mwKoC","KlAtU1dfN6UC","3fE2CSJIrl8C","5nxA0vEk-isC","2osOgNQ5qMEC","Y0pCki6q_DkC")) %>%
+  dplyr::arrange(dplyr::desc(year)) %>%
+  dplyr::select(title,author,journal,year,cites) %>%
+  dplyr::rename(Title = title, Author = author, Journal = journal, Year = year, Citations = cites) %>%
+  dplyr::filter(Title != "Developing a youth suicide prevention strategy for Tasmania: A review of the literature")
+all_pr_tb <- dplyr::bind_rows(accepted_tb,published_tb)
+```
+
+```{r}
+non_pr_tb <- read.csv("Non_PR_Pubs.csv")
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+```{r echo=F, warning=F}
+# all_x_tb <- all_tb %>%
+#   xtable::xtable(caption = "Accepted and published peer-reviewed work", label = "tab:prpubstable") #%>%
+# # #xtable::align(all_x_tb) <- "|l|llp{6cm}p{6cm}|"
+# all_x_tb %>%
+#   print(comment = F,
+#         include.rownames=FALSE,
+#         scalebox = 0.75)
+all_pr_tb %>%
+    kableExtra::kable(caption = "Accepted and published peer-reviewed work") %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  kableExtra::footnote(general = "^ = In Press" )
+```
