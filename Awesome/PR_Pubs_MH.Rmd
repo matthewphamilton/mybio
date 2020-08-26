@@ -1,0 +1,47 @@
+---
+name: Matthew
+surname: Hamilton
+position: "Health economist"
+address: "Orygen"
+phone: +61 413 976 905
+www: orcid.org/0000-0001-7407-9194
+email: "Matthew.Hamilton@Orygen.Org.Au"
+github: matthewphamilton
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "000000"
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+
+```
+
+```{r child="PR_Pubs_Body.Rmd", echo=FALSE}
+```
+
+# Peer-reviewed publications
+```{r pr}
+pr_tb %>% 
+  dplyr::mutate(New_Number = dplyr::case_when(In_Press_Lgl  ~ "In Press",
+                                             TRUE ~ Number)) %>%
+  dplyr::mutate(Year_Number = New_Number %>% 
+                  strsplit(", ") %>% 
+                  purrr::map2_chr(Year,~ifelse(identical(.x,character(0)),
+  as.character(.y),
+  paste(ifelse(.x[1]=="",
+               "",
+               paste0(.x[1],",")),
+  .y,
+        ifelse(length(.x)<2,
+               "",
+               paste0(", ",.x[2]))
+  )))) %>%
+  vitae::detailed_entries(
+    what = Title,
+    when = Year_Number,
+    with = Author,
+    where = Journal,
+    .protect = TRUE)
+```

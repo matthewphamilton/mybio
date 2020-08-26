@@ -1,0 +1,31 @@
+---
+title: "Functions.Rmd"
+author: "Matthew Hamilton"
+date: "18/08/2020"
+output: html_document
+---
+
+```{r}
+library(magrittr)
+remove_commmas <- function(x){
+  purrr::map_chr(x, ~ stringr::str_replace_all(.x,"\"",""))
+}
+get_fn_auts_1L_chr <- function(package_nm_1L_chr){ # Move to ready4show
+  aut_chr <-  utils::packageDescription(package_nm_1L_chr,fields="Author") %>% strsplit("\n") %>% purrr::flatten_chr()
+aut_chr <- aut_chr[aut_chr %>% stringr::str_detect("\\[aut")]
+aut_1L_chr <- stringr::word(aut_chr,1,sep = "\\[aut") %>% trimws() %>% knitr::combine_words()
+return(aut_1L_chr)
+}
+get_fn_remote_1L_chr <- function(package_nm_1L_chr){ # Move to ready4show
+  if(utils::packageDescription(package_nm_1L_chr,fields="RemoteHost") == "api.github.com"){
+    remote_1L_chr <- paste0("github.com/",
+                            utils::packageDescription(package_nm_1L_chr,fields="GithubUsername"),
+                            "/",
+                            utils::packageDescription(package_nm_1L_chr,fields="GithubRepo"))
+  }else{
+    remote_1L_chr <- NA_character_
+  }
+  return(remote_1L_chr)
+} # Integrate with call to pkgsearch::ps for published packages
+```
+
