@@ -1,0 +1,35 @@
+---
+title: Software list
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::markdowncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+For the most up to date information about the software I develop, visit:
+
+https://www.ready4-dev.com
+
+```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
+```
+```{r child="../Child_RMDs/Libs_Prep.Rmd", echo=FALSE}
+```
+```{r software}
+libs_tb %>% 
+  dplyr::mutate(Name_title = paste0(Name,
+                                        " - ",
+                                        Title)) %>%
+  vitae::detailed_entries(
+    what = Author,
+    when = Version,
+    with = Repository,
+    where = Name_title,
+    #why = Repository,
+    .protect = TRUE)
+##
+## NEED TO ADD APPS & DATASETS
+```
+

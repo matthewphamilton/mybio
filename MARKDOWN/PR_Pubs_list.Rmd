@@ -1,28 +1,24 @@
 ---
-name: Matthew
-surname: Hamilton
-position: "Health economist"
-address: "Orygen"
-www: orcid.org/0000-0001-7407-9194
-email: "Matthew.Hamilton@Orygen.Org.Au"
-github: matthewphamilton
 date: "`r format(Sys.time(), '%B %Y')`"
-headcolor: "000000"
-output: vitae::awesomecv
+output: 
+  vitae::markdowncv
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
-
 ```
 
-```{r child="PR_Pubs_Body.Rmd", echo=FALSE}
+```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
 ```
 
-# Peer-reviewed publications
+```{r child="../Child_RMDs/PR_Pubs_Prep.Rmd", echo=FALSE}
+```
 ```{r pr}
 pr_tb %>% 
+    dplyr::mutate(New_Cites = dplyr::case_when(In_Press_Lgl  ~ "In Press",
+                                             TRUE ~ paste0(as.character(Citations)," cites"))) %>%
+  dplyr::mutate(Year_Cites = paste0(Year," - ",New_Cites)) %>%
   dplyr::mutate(New_Number = dplyr::case_when(In_Press_Lgl  ~ "In Press",
                                              TRUE ~ Number)) %>%
   dplyr::mutate(Year_Number = New_Number %>% 
@@ -39,8 +35,10 @@ pr_tb %>%
   )))) %>%
   vitae::detailed_entries(
     what = Title,
-    when = Year_Number,
+    when = Year_Cites,
     with = Author,
     where = Journal,
     .protect = TRUE)
 ```
+
+

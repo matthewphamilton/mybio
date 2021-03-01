@@ -1,0 +1,23 @@
+---
+title: "Libs_Render_V1"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+
+```{r software}
+libs_tb %>% 
+  dplyr::mutate(Name_title = paste0(Name,
+                                        " - ",
+                                        Title)) %>%
+  vitae::detailed_entries(
+    what = Author,
+    when = Date,
+    with = Name_title,
+    where = Version,
+    #why = Repository, # Links don't render properly
+    .protect = TRUE)
+##
+## NEED TO ADD APPS & DATASETS
+```  
+

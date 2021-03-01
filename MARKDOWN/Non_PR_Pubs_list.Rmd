@@ -1,0 +1,30 @@
+---
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::markdowncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
+```
+
+```{r include=F}
+non_pr_tb <- read.csv("../Data/Non_PR_Pubs.csv") %>%
+  dplyr::mutate_all(remove_commmas)
+```
+
+```{r nonpr}
+non_pr_tb %>% 
+  vitae::detailed_entries(
+    what = Author,
+    when = Year,
+    with = Publisher,
+    where = Title,
+    .protect = TRUE)
+```
+
+

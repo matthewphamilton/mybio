@@ -1,0 +1,20 @@
+---
+title: "Peer Reviewed Publications - Matthew Hamilton"
+author: "Matthew Hamilton"
+date: "03/08/2020"
+output: html_document
+---
+
+```{r pr}
+pr_tb %>% 
+  #dplyr::mutate(New_Cites = as.character(Citations)) %>%
+  dplyr::mutate(New_Cites = dplyr::case_when(In_Press_Lgl  ~ "In Press",
+                                             TRUE ~ paste0(as.character(Citations)," cites"))) %>%
+  dplyr::mutate(Year_Cites = paste0(Year," - ",New_Cites)) %>%
+  vitae::detailed_entries(
+    what = Author,#Title,
+    when = Year_Cites,
+    with = Title,#Author,
+    where = Journal,
+    .protect = TRUE)
+```

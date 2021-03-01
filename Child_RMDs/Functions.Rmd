@@ -27,5 +27,9 @@ get_fn_remote_1L_chr <- function(package_nm_1L_chr){ # Move to ready4show
   }
   return(remote_1L_chr)
 } # Integrate with call to pkgsearch::ps for published packages
+get_pkg_dmnt_url <-  function(pkg_nm_1L_chr){
+  pkg_dmnt_url_1L_chr <- utils::packageDescription(pkg_nm_1L_chr, fields="URL") %>% strsplit(",\n") %>% purrr::pluck(1) %>% purrr::pluck(1)
+  return(pkg_dmnt_url_1L_chr)
+}
 ```
 

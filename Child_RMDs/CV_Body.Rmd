@@ -21,6 +21,10 @@ output: html_document
 ```{r child="Non_PR_Body.Rmd", echo=FALSE}
 ```
 # Software
+For details about where to find documentation and installation instructions for the software I develop, visit:
+
+https://www.ready4-dev.com
+
 ## R Code Libraries
 ```{r child="Libs_Body.Rmd", echo=FALSE}
 ```

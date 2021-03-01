@@ -9,7 +9,6 @@ headcolor: "000000"
 output: 
   vitae::markdowncv:
     theme: "davewhipp"
-          
 ---
 
 ```{r setup, include=FALSE}
