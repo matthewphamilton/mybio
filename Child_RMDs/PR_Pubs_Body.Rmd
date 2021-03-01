@@ -1,0 +1,85 @@
+---
+title: "Peer Reviewed Publications - Matthew Hamilton"
+author: "Matthew Hamilton"
+date: "03/08/2020"
+output: html_document
+---
+
+```{r}
+library(magrittr)
+```
+
+```{r include=F}
+# cits_tb <-rorcid::works(rorcid::as.orcid("0000-0001-7407-9194"))
+# cits_tb %>% dplyr::select(title.title.value,`publication-date.year.value`,`journal-title.value`) %>% kableExtra::kable()
+accepted_tb <- tibble::tibble(Title = c("Identification and Management of Psoriasis Associated Co-MorbidiTy: The IMPACT Research Programme"),
+                              Author = c("L Cordingley, PA Nelson, L Davies, D Ashcroft, C Bundy, C Chew-Graham, A Chisholm, J Elvidge, M Hamilton,..."#" R Hilton, K Kane, C Keyworth, A Littlewood, K Lovell, M Lunt, H McAteer, D Ntais, R Parisi, C Pearce, M Rutter, D Symmons, H Young  & CEM Griffiths"
+                                         ),
+                              Journal = c("Programme Grants Appl Res"),
+                              Year = 2021,
+                              Citations = 0,
+                              Number = NA_character_,
+                              In_Press_Lgl = T)
+```
+
+```{r include=F}
+pr_tb <- scholar::get_publications("t1ZHrCoAAAAJ") %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(!pubid %in% c("IjCSPb-OGe4C","0EnyYjriUFMC","kNdYIx-mwKoC","KlAtU1dfN6UC","3fE2CSJIrl8C","5nxA0vEk-isC","2osOgNQ5qMEC","Y0pCki6q_DkC")) %>%
+  dplyr::arrange(dplyr::desc(year)) 
+incomplete_chr <- c("_kc_bZDykSQC", "Zph67rFs4hoC", "4TOpqqG69KYC", "ULOm3_A8WrAC", "YOwf2qJgpHMC", "8k81kl-MbHgC", "YsMSGLbcyi4C")
+missing_data_chr <- c(", 1– 13",
+                      "46(4) ,869–88",
+                      "20(100323), 1-10",
+                      ", 1-7",
+                      ", 1-27",
+                      ", 1-10",
+                      "19(32), 1-154")
+pr_tb <- 1:length(incomplete_chr) %>% purrr::reduce(.init = pr_tb,
+                                                    ~ {
+                                                      match_chr <- incomplete_chr[.y]
+                                                    replacement_chr <- missing_data_chr[.y]
+                                                      .x %>% dplyr::mutate(number = purrr::map2_chr(pubid,
+                                                                                                    number,
+                                                                                                   ~ifelse(.x==match_chr,
+                                                                                                           replacement_chr,
+                                                                                                           .y)))
+                                                      }
+                                                    )
+
+```
+
+```{r}
+pr_tb <- pr_tb %>%
+  dplyr::select(title,author,journal,year,cites,number) %>%
+  dplyr::rename(Title = title, 
+                Author = author, 
+                Journal = journal, 
+                Year = year, 
+                Citations = cites,
+                Number = number) %>%
+  dplyr::filter(Title != "Developing a youth suicide prevention strategy for Tasmania: A review of the literature",
+                Title != "Motivational interviewing-based training enhances clinicians' skills and knowledge in psoriasis") %>%
+  dplyr::mutate(Author = purrr::map_chr(Author, ~ stringr::str_replace_all(.x,"RICKWOOD","Rickwood")),
+                Year = purrr::map_dbl(Year,~ifelse(is.na(.x),2021,.x))) %>%
+  dplyr::arrange(dplyr::desc(Year))
+```
+
+```{r}
+pr_tb <- dplyr::bind_rows(accepted_tb,
+                          pr_tb %>%
+                            dplyr::mutate(In_Press_Lgl = F))
+```
+```{r pr}
+pr_tb %>% 
+  #dplyr::mutate(New_Cites = as.character(Citations)) %>%
+  dplyr::mutate(New_Cites = dplyr::case_when(In_Press_Lgl  ~ "In Press",
+                                             TRUE ~ paste0(as.character(Citations)," cites"))) %>%
+  dplyr::mutate(Year_Cites = paste0(Year," - ",New_Cites)) %>%
+  vitae::detailed_entries(
+    what = Author,#Title,
+    when = Year_Cites,
+    with = Title,#Author,
+    where = Journal,
+    .protect = TRUE)
+```

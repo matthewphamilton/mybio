@@ -1,0 +1,19 @@
+---
+title: "Jobs_Body"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+
+```{r include=F}
+jobs_tb <- read.csv("../Data/Jobs.csv") %>%
+  dplyr::mutate_all(remove_commmas)
+```
+```{r jobs}
+jobs_tb %>% 
+  vitae::detailed_entries(
+    what = Title,#Employer,
+    when = When,
+    with = Employer,#Title,
+    where = Where)
+```

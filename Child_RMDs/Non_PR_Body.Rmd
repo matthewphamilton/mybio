@@ -1,0 +1,21 @@
+---
+title: "Non_PR_Body"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+
+```{r include=F}
+non_pr_tb <- read.csv("../Data/Non_PR_Pubs.csv") %>%
+  dplyr::mutate_all(remove_commmas)
+```
+
+```{r nonpr}
+non_pr_tb %>% 
+  vitae::detailed_entries(
+    what = Author,#Title,
+    when = Year,
+    with = Title,#Author,
+    where = Publisher,
+    .protect = TRUE)
+```

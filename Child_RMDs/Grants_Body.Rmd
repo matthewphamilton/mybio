@@ -1,0 +1,19 @@
+---
+title: "Grants_Body"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+```{r include=F}
+grants_tb <- read.csv("../Data/Grants.csv")
+```
+```{r grants}
+grants_tb %>% 
+    dplyr::mutate(Funder_Amt = paste0(Funder," - ",Amount)) %>%
+  vitae::detailed_entries(
+    what = Role,
+    when = Year,
+    with = Title,#Author,
+    where = Funder_Amt,#Publisher,
+    .protect = TRUE)
+```

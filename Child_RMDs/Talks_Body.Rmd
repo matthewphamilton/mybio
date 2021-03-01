@@ -1,0 +1,20 @@
+---
+title: "Talks_Body"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+```{r include=F}
+presentations_tb <- read.csv("../Data/Presentations.csv") %>%
+  dplyr::mutate_all(remove_commmas)
+```
+```{r presentaitons}
+presentations_tb %>% 
+  dplyr::mutate(Year_Format = paste0(Format," - ",Year)) %>%
+  vitae::detailed_entries(
+    what = Author...Presenter,
+    when = Year_Format,
+    with = Title,#Author,
+    where = Host...Event,#Publisher,
+    .protect = TRUE)
+```

@@ -1,0 +1,21 @@
+---
+title: "Teaching_Body"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+
+```{r include=F}
+teaching_tb <- read.csv("../Data/Teaching.csv") %>%
+  dplyr::mutate_all(remove_commmas)
+```
+```{r teaching}
+teaching_tb %>% 
+      dplyr::mutate(Role_Inst = paste0(Role,", ",Institution)) %>%
+  vitae::detailed_entries(
+    what = Role_Inst,
+    when = Year,
+    with = Course,#Author,
+    where = Location,#Role
+    .protect = TRUE)
+``` 

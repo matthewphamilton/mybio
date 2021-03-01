@@ -1,0 +1,84 @@
+---
+title: "Libs_Body"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+
+```{r }
+libs_tb <- tibble::tibble(Name = c(
+  "bimp",
+  "ready4show",
+  "ready4class",#"ready4sim","ready4space",
+  "ready4use",
+  "ready4fun",
+  "TTU",
+  "youthu") %>% sort(),
+               Type = c(#rep("App",2),rep("Model and context",2),
+                 rep("SDK",1)),
+  Language = "R") %>%
+  dplyr::mutate(Description = purrr::map_chr(.$Name,
+                                             ~ utils::packageDescription(.x, 
+                                                                             fields = "Description")),
+                Title = purrr::map_chr(.$Name,
+                                        ~ packageDescription(.x, fields = "Title")),
+                Version = purrr::map_chr(.$Name,
+                                        ~ packageDescription(.x, fields = "Version")),
+                Author = purrr::map_chr(.$Name,
+                                        ~ get_fn_auts_1L_chr(.x)),
+                Repository = purrr::map_chr(.$Name,
+                                        ~ get_fn_remote_1L_chr(.x)),
+                Date = purrr::map_chr(.$Name,
+                                      ~ packageDate(.x) %>% format.Date("%d %B %Y"))
+) %>%
+  dplyr::mutate(Imports = purrr::map2_chr(.$Name,
+                                          .$Type,
+                                          ~ ifelse(.y=="App",
+                                                   paste0(c("shiny",
+                                                            paste0(ifelse(.x == "Springtides","springtides","s2lsd"),
+                                                                   " (>= ",
+                                                                   utils::packageDescription(ifelse(.x == "Springtides","springtides","s2lsd"), fields = "Version"),
+                                                                   ")")
+                                                          ) %>% sort(), 
+                                                          sep=", ", 
+                                                          collapse=""
+                                                          ) %>%
+                                                     stringr::str_sub(end=-2),
+                                                   ifelse(.x == "ready4showXXX",
+                                                          c("bookdown,kableExtra,knitr,rmarkdown,rticles,shiny",
+                                                            utils::packageDescription("ready4plot", 
+                                                                             fields = "Imports") %>%
+                                                              strsplit(", ") %>%
+                                                              purrr::pluck(1)) %>% sort() %>%
+                                                            paste0(sep=", ", collapse=""),
+                                                   utils::packageDescription(.x, 
+                                                                             fields = "Imports") %>% sort()))
+                                          )
+
+                )
+
+ 
+
+
+```
+```{r software}
+libs_tb %>% 
+  dplyr::mutate(Name_ver_title = paste0(Name,
+                                        "(v",
+                                        Version,
+                                        ") - ",
+                                        Title)) %>%
+  vitae::detailed_entries(
+    what = Author,
+    when = Date,
+    with = Name_ver_title,
+    where = Repository,
+    #why = Description,
+    .protect = TRUE)
+##
+## NEED TO ADD APPS & DATASETS
+```  
+
+For the most up to date information about the software I develop visit:
+
+https://www.ready4-dev.com

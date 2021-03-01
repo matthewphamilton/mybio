@@ -1,0 +1,42 @@
+---
+title: "CV_Body"
+author: "Matthew Hamilton"
+date: "03/08/2020"
+output: html_document
+---
+
+# Qualifications
+```{r child="Quals_Body.Rmd", echo=FALSE}
+```  
+
+# Employment and Appointments
+```{r child="Jobs_Body.Rmd", echo=FALSE}
+``` 
+
+# Peer-reviewed publications
+```{r child="PR_Pubs_Body.Rmd", echo=FALSE}
+```
+
+# Non-peer-reviewed publications
+```{r child="Non_PR_Body.Rmd", echo=FALSE}
+```
+# Software
+## R Code Libraries
+```{r child="Libs_Body.Rmd", echo=FALSE}
+```
+
+# Presentations
+```{r child="Talks_Body.Rmd", echo=FALSE}
+```
+# Grants
+```{r child="Grants_Body.Rmd", echo=FALSE}
+```
+
+# Teaching
+```{r child="Teaching_Body.Rmd", echo=FALSE}
+```  
+
+
+
+
+
