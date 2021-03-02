@@ -1,3 +1,3 @@
-# mybio
+# Matthew Hamilton CV
 
-Academic biography of Matthew Hamilton
+[PDF version of my CV](Docs/MPHamiltonCV.pdf)
