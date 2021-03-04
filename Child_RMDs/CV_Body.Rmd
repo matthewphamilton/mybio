@@ -20,10 +20,10 @@ output: html_document
 # Non-peer-reviewed publications
 ```{r child="Non_PR_Body.Rmd", echo=FALSE}
 ```
-# Software
-For details about where to find documentation and installation instructions for the software I develop, visit:
 
-https://www.ready4-dev.com
+# Software
+```{r child="../USER_PARAMS_RMDs/USER_SOFTWARE_INTRO.Rmd", echo=FALSE}
+```
 
 ## R Code Libraries
 ```{r child="Libs_Body.Rmd", echo=FALSE}
@@ -32,6 +32,7 @@ https://www.ready4-dev.com
 # Presentations
 ```{r child="Talks_Body.Rmd", echo=FALSE}
 ```
+
 # Grants
 ```{r child="Grants_Body.Rmd", echo=FALSE}
 ```

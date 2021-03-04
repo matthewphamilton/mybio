@@ -1,8 +1,8 @@
-Course,Format,Location,Institution,Role,Year
-"""Understanding and applying health economic tools and techniques""",E-Learning,Online,Leading Edge Group,Course Director,"""2015-Present"""
-"""Health economic evaluation lectures, epidemiology module, Masters of Clinical Rheumatology""",Lecture,"""Manchester, UK""", University of Manchester,Guest Lecturer,2015
-"""Health economic evaluation module, Masters of Public Health""",Online,"""Manchester, UK""",University of Manchester,Assessor,2014
-"""Health economics: evidence, outcomes and efficiency""",Workshop,"""Toronto, Canada""",Leading Edge Group,Presenter and Facilitator," ""June 2014"""
-"""Using health economic evidence to enhance hospital pharmacy outcomes""",Workshop,"""Dublin, Ireland""",Pfizer,Presenter and Facilitator,"""May 2014"""
-"""Become your own hero - decision making for better health, work and life""",Workshop & E-Learning,"""Six Eastern Caribbean Countries""",Trust for the Americas,"""Course Director, Presenter and Facilitator""",2009
-Social studies,High School,"""Chimaltenango, Guatemala""",Fundacion Rose,Teacher,2008
+Course,Format,Location,Institution,Role,Year,Current
+"""Understanding and applying health economic tools and techniques""",E-Learning,Online,Leading Edge Group,Course Director,"""2015-Present""",TRUE
+"""Health economic evaluation lectures, epidemiology module, Masters of Clinical Rheumatology""",Lecture,"""Manchester, UK""", University of Manchester,Guest Lecturer,2015,FALSE
+"""Health economic evaluation module, Masters of Public Health""",Online,"""Manchester, UK""",University of Manchester,Assessor,2014,FALSE
+"""Health economics: evidence, outcomes and efficiency""",Workshop,"""Toronto, Canada""",Leading Edge Group,Presenter and Facilitator," ""June 2014""",FALSE
+"""Using health economic evidence to enhance hospital pharmacy outcomes""",Workshop,"""Dublin, Ireland""",Pfizer,Presenter and Facilitator,"""May 2014""",FALSE
+"""Become your own hero - decision making for better health, work and life""",Workshop & E-Learning,"""Six Eastern Caribbean Countries""",Trust for the Americas,"""Course Director, Presenter and Facilitator""",2009,FALSE
+Social studies,High School,"""Chimaltenango, Guatemala""",Fundacion Rose,High School Teacher,2008,FALSE

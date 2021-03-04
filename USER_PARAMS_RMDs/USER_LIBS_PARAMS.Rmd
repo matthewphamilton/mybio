@@ -1,0 +1,10 @@
+---
+title: "USER_LIBS_PARAMS"
+author: "Matthew Hamilton"
+date: "04/03/2021"
+output: html_document
+---
+```{r include = F}
+r_libs_chr =  c('bimp','ready4show','ready4class','ready4use','ready4fun','TTU','youthu')
+```
+

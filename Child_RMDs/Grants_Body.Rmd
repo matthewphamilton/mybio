@@ -13,7 +13,7 @@ grants_tb %>%
   vitae::detailed_entries(
     what = Role,
     when = Year,
-    with = Title,#Author,
-    where = Funder_Amt,#Publisher,
+    with = Title,
+    where = Funder_Amt,
     .protect = TRUE)
 ```

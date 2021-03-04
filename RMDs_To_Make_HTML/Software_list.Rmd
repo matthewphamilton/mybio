@@ -9,9 +9,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
-For the most up to date information about the software I develop, visit:
 
-https://www.ready4-dev.com
+```{r child="../USER_PARAMS_RMDs/USER_LIBS_PARAMS.Rmd", echo=FALSE}
+```
 
 ```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
 ```

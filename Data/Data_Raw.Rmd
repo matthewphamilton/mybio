@@ -1,0 +1,38 @@
+---
+title: "Data_Raw"
+author: "Matthew Hamilton"
+date: "04/03/2021"
+output: html_document
+---
+
+
+```{r include=F}
+accepted_tb <- tibble::tibble(Title = c("Identification and Management of Psoriasis Associated Co-MorbidiTy: The IMPACT Research Programme"),
+                              Author = c("L Cordingley, PA Nelson, L Davies, D Ashcroft, C Bundy, C Chew-Graham, A Chisholm, J Elvidge, M Hamilton,..."#" R Hilton, K Kane, C Keyworth, A Littlewood, K Lovell, M Lunt, H McAteer, D Ntais, R Parisi, C Pearce, M Rutter, D Symmons, H Young  & CEM Griffiths"
+                                         ),
+                              Journal = c("Programme Grants Appl Res"),
+                              Year = 2021,
+                              Citations = 0,
+                              Number = NA_character_,
+                              In_Press_Lgl = T,
+                              Link = NA_character_)
+write.csv(accepted_tb,"accepted_tb.csv", row.names = F)
+
+```
+```{r include=F}
+replace_nbrs_tb <- tibble::tibble(incomplete_chr = c("_kc_bZDykSQC", 
+                                                     "Zph67rFs4hoC", 
+                                                     "4TOpqqG69KYC", 
+                                                     "ULOm3_A8WrAC", 
+                                                     "YOwf2qJgpHMC", 
+                                                     "8k81kl-MbHgC", 
+                                                     "YsMSGLbcyi4C"),
+missing_data_chr = c(", 1– 13",
+                     "46(4) ,869–88",
+                      "20(100323), 1-10",
+                      ", 1-7",
+                      ", 1-27",
+                      ", 1-10",
+                      "19(32), 1-154"))
+write.csv(replace_nbrs_tb,"replace_nbrs_tb.csv", row.names = F)
+```

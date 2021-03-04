@@ -10,13 +10,13 @@ library(magrittr)
 remove_commmas <- function(x){
   purrr::map_chr(x, ~ stringr::str_replace_all(.x,"\"",""))
 }
-get_fn_auts_1L_chr <- function(package_nm_1L_chr){ # Move to ready4show
+get_fn_auts <- function(package_nm_1L_chr){ # Move to ready4show
   aut_chr <-  utils::packageDescription(package_nm_1L_chr,fields="Author") %>% strsplit("\n") %>% purrr::flatten_chr()
 aut_chr <- aut_chr[aut_chr %>% stringr::str_detect("\\[aut")]
 aut_1L_chr <- stringr::word(aut_chr,1,sep = "\\[aut") %>% trimws() %>% knitr::combine_words()
 return(aut_1L_chr)
 }
-get_fn_remote_1L_chr <- function(package_nm_1L_chr){ # Move to ready4show
+get_fn_remote <- function(package_nm_1L_chr){ # Move to ready4show
   if(utils::packageDescription(package_nm_1L_chr,fields="RemoteHost") == "api.github.com"){
     remote_1L_chr <- paste0("github.com/",
                             utils::packageDescription(package_nm_1L_chr,fields="GithubUsername"),
@@ -30,6 +30,123 @@ get_fn_remote_1L_chr <- function(package_nm_1L_chr){ # Move to ready4show
 get_pkg_dmnt_url <-  function(pkg_nm_1L_chr){
   pkg_dmnt_url_1L_chr <- utils::packageDescription(pkg_nm_1L_chr, fields="URL") %>% strsplit(",\n") %>% purrr::pluck(1) %>% purrr::pluck(1)
   return(pkg_dmnt_url_1L_chr)
+}
+make_md_peer_rvd_pubs_tbl <- function(peer_rvd_pubs_tbl){
+ md_peer_rvd_pubs_df <- data.frame(Year = paste0(peer_rvd_pubs_tbl$Year,"  "),
+                                   Gap = " &nbsp;&nbsp; ",
+                                   Details = purrr::pmap_chr(peer_rvd_pubs_tbl,
+                          ~{
+                            paste0(paste0("**",..3,"** "),
+                                   paste0(..8 %>% 
+                                            purrr::map_chr(~ifelse(is.na(.x),
+                                                 "",
+                                                 "[")),
+                                          ..1,
+                                          ..8 %>%
+                                            purrr::map_chr(~ifelse(is.na(.x),
+                                                 "",
+                                                 paste0("](",.x,")")))),
+                                   " ",
+                                   ..2)
+                          }
+                            
+                            ),
+                                                             Citations = peer_rvd_pubs_tbl$Citations
+
+           ) 
+ names(md_peer_rvd_pubs_df)[2] <- ""
+ md_peer_rvd_pubs_kbl <- md_peer_rvd_pubs_df %>%
+  kableExtra::kable(align=c("l","l","l","r")) 
+ return(md_peer_rvd_pubs_kbl)
+}
+make_peer_revd_tb_spine <- function(scholar_id_1L_chr,
+                                    exclude_ids_chr = NA_character_,
+                                    replace_nbrs_tb = NULL,
+                                    sanitise_fn = NULL){
+  peer_revd_tb_spine <- scholar::get_publications(scholar_id_1L_chr) %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(!pubid %in% exclude_ids_chr) %>%
+  dplyr::arrange(dplyr::desc(year)) 
+if(!is.null(replace_nbrs_tb)){
+  peer_revd_tb_spine <- 1:nrow(replace_nbrs_tb) %>% 
+    purrr::reduce(.init = peer_revd_tb_spine,
+                                                    ~ {
+                                                      match_chr <- replace_nbrs_tb$incomplete_chr[.y]
+                                                    replacement_chr <- replace_nbrs_tb$missing_data_chr[.y]
+                                                      .x %>% dplyr::mutate(number = purrr::map2_chr(pubid,
+                                                                                                    number,
+                                                                                                   ~ifelse(.x==match_chr,
+                                                                                                           replacement_chr,
+                                                                                                           .y)))
+                                                      }
+                                                    )
+}
+ peer_revd_tb_spine <- peer_revd_tb_spine %>%
+  dplyr::mutate(link_chr = .$cid %>%
+  purrr::map_chr(~ifelse(is.na(.x),
+                         NA_character_,
+                         paste0("https://scholar.google.com.au/scholar?oi=bibs&cluster=",
+                         .x, 
+                         "&btnI=1&hl=en")))) %>%
+  dplyr::select(title,author,journal,year,cites,number,link_chr) %>%
+  dplyr::mutate(journal = journal %>% tools::toTitleCase()) %>%
+  dplyr::rename(Title = title, 
+                Author = author, 
+                Journal = journal, 
+                Year = year, 
+                Citations = cites,
+                Number = number,
+                Link = link_chr) %>%
+   dplyr::mutate(In_Press_Lgl = F)
+ if(!is.null(sanitise_fn)){
+   peer_revd_tb_spine <- rlang::exec(sanitise_fn,peer_revd_tb_spine)
+ }
+  return(peer_revd_tb_spine)
+}
+make_peer_rvd_pubs_tbl <- function(peer_revd_tb_spine,
+                                  accepted_tb = NULL){
+  if(!is.null(accepted_tb)){
+    peer_rvd_pubs_tbl <- dplyr::bind_rows(accepted_tb,
+                          peer_revd_tb_spine) 
+  }else{
+    peer_rvd_pubs_tbl <- peer_revd_tb_spine
+  }
+  peer_rvd_pubs_tbl <- peer_rvd_pubs_tbl %>%
+  dplyr::mutate(New_Cites = dplyr::case_when(In_Press_Lgl  ~ "In Press",
+                                             TRUE ~ paste0(as.character(Citations)," cites"))) %>%
+  dplyr::mutate(Year_Cites = paste0(Year," - ",New_Cites)) %>%
+  dplyr::mutate(New_Number = dplyr::case_when(In_Press_Lgl  ~ "In Press",
+                                             TRUE ~ Number)) %>%
+  dplyr::mutate(Year_Number = New_Number %>% 
+                  strsplit(", ") %>% 
+                  purrr::map2_chr(Year,~ifelse(identical(.x,character(0)),
+  as.character(.y),
+  paste(ifelse(.x[1]=="",
+               "",
+               paste0(.x[1],",")),
+  .y,
+        ifelse(length(.x)<2,
+               "",
+               paste0(", ",.x[2]))
+  ))))
+}
+transform_peer_rvd_pubs_tbl <- function(peer_rvd_pubs_tbl){
+  tfd_peer_rvd_pubs_tbl <- peer_rvd_pubs_tbl %>% 
+  dplyr::mutate(New_Number = dplyr::case_when(In_Press_Lgl  ~ "In Press",
+                                             TRUE ~ Number)) %>%
+  dplyr::mutate(Year_Number = New_Number %>% 
+                  strsplit(", ") %>% 
+                  purrr::map2_chr(Year,~ifelse(identical(.x,character(0)),
+  as.character(.y),
+  paste(ifelse(.x[1]=="",
+               "",
+               paste0(.x[1],",")),
+  .y,
+        ifelse(length(.x)<2,
+               "",
+               paste0(", ",.x[2]))
+  ))))
+  return(tfd_peer_rvd_pubs_tbl)
 }
 ```
 

@@ -1,0 +1,46 @@
+---
+title: Teaching
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::markdowncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
+```
+
+```{r include=F}
+teaching_tb <- read.csv("../Data/Teaching.csv") %>%
+  dplyr::mutate_all(remove_commmas)
+teaching_tb$Current <- teaching_tb$Current %>% as.logical()
+```
+
+# Current
+```{r current}
+teaching_tb %>% 
+  dplyr::filter(Current) %>%
+      dplyr::mutate(Role_Inst = paste0(Role,", ",Institution)) %>%
+  vitae::detailed_entries(
+    what = Course,
+    when = Year,
+    with = Location,
+    where = Role_Inst,
+    .protect = TRUE)
+``` 
+
+# Previous
+```{r previous}
+teaching_tb %>% 
+  dplyr::filter(!Current) %>%
+      dplyr::mutate(Role_Inst = paste0(Role,", ",Institution)) %>%
+  vitae::detailed_entries(
+    what = Course,
+    when = Year,
+    with = Location,
+    where = Role_Inst,
+    .protect = TRUE)
+``` 

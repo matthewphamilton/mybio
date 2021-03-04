@@ -1,0 +1,26 @@
+---
+title: "Peer reviewed publications"
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::markdowncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
+```
+```{r child="../Child_RMDs/PR_Pubs_Prep.Rmd", echo=FALSE}
+```
+```{r pr}
+peer_rvd_pubs_tb %>% 
+  vitae::detailed_entries(
+    what = Title,
+    when = Year_Cites,
+    with = Author,
+    where = Journal,
+    .protect = TRUE)
+```
+
+

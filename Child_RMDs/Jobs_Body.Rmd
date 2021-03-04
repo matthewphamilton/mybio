@@ -12,8 +12,8 @@ jobs_tb <- read.csv("../Data/Jobs.csv") %>%
 ```{r jobs}
 jobs_tb %>% 
   vitae::detailed_entries(
-    what = Title,#Employer,
+    what = Title,
     when = When,
-    with = Employer,#Title,
+    with = Employer,
     where = Where)
 ```

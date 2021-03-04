@@ -6,15 +6,14 @@ output: html_document
 ---
 
 ```{r pr}
-pr_tb %>% 
-  #dplyr::mutate(New_Cites = as.character(Citations)) %>%
+peer_rvd_pubs_tbl %>% 
   dplyr::mutate(New_Cites = dplyr::case_when(In_Press_Lgl  ~ "In Press",
                                              TRUE ~ paste0(as.character(Citations)," cites"))) %>%
   dplyr::mutate(Year_Cites = paste0(Year," - ",New_Cites)) %>%
   vitae::detailed_entries(
-    what = Author,#Title,
+    what = Author,
     when = Year_Cites,
-    with = Title,#Author,
+    with = Title,
     where = Journal,
     .protect = TRUE)
 ```

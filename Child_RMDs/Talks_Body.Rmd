@@ -14,7 +14,7 @@ presentations_tb %>%
   vitae::detailed_entries(
     what = Author...Presenter,
     when = Year_Format,
-    with = Title,#Author,
-    where = Host...Event,#Publisher,
+    with = Title,
+    where = Host...Event,
     .protect = TRUE)
 ```

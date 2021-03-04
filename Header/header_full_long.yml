@@ -1,24 +1,11 @@
----
 name: Matthew
 surname: Hamilton
 aboutme: "I am a research economist at Orygen, working to achieve better mental health outcomes for young people. My main focus is improving the quality and usefulness of mental health mathematical models through adopting modular, replicable and generalisable methods."
 position: "Economist and mental health modeller"
 address: "Orygen"
+www: orcid.org/0000-0001-7407-9194
+email: "Matthew.Hamilton@Orygen.Org.Au"
+github: matthewphamilton
+linkedin: matthewhamiltonprofile
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "000000"
-output: 
-  vitae::markdowncv:
-    theme: "davewhipp"
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-library(vitae)
-
-```
-
-```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
-```
-
-```{r child="../Child_RMDs/CV_Body.Rmd", echo=FALSE}
-```

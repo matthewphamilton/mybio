@@ -13,9 +13,9 @@ non_pr_tb <- read.csv("../Data/Non_PR_Pubs.csv") %>%
 ```{r nonpr}
 non_pr_tb %>% 
   vitae::detailed_entries(
-    what = Author,#Title,
+    what = Author,
     when = Year,
-    with = Title,#Author,
+    with = Title,
     where = Publisher,
     .protect = TRUE)
 ```

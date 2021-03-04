@@ -1,0 +1,22 @@
+---
+title: "User_Params_For_PR_Pubs"
+author: "Matthew Hamilton"
+date: "04/03/2021"
+output: html_document
+---
+
+```{r include=F}
+sanitise_peer_revd_tb <- function(peer_revd_tb_spine){ 
+  peer_revd_tb_spine <- peer_revd_tb_spine  %>%
+  dplyr::mutate(Journal = Journal %>% purrr::map_chr(~ ifelse(.x == "Health Technology Assessment (Winchester, England)","Health Technology Assessment",.x))) %>%
+  dplyr::mutate(Author = purrr::map_chr(Author, ~ stringr::str_replace_all(.x,"RICKWOOD","Rickwood")),
+                Year = purrr::map_dbl(Year,~ifelse(is.na(.x),2021,.x))) %>%
+  dplyr::arrange(dplyr::desc(Year)) 
+  return(peer_revd_tb_spine)
+}
+```
+
+```{r include=F}
+scholar_id_1L_chr = "t1ZHrCoAAAAJ"
+exclude_ids_chr = c("IjCSPb-OGe4C","0EnyYjriUFMC","kNdYIx-mwKoC","KlAtU1dfN6UC","3fE2CSJIrl8C","5nxA0vEk-isC","2osOgNQ5qMEC","Y0pCki6q_DkC","qxL8FJ1GzNcC","Tyk-4Ss8FVUC")
+```

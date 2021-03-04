@@ -1,0 +1,45 @@
+---
+title: Presentations
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::markdowncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
+```
+```{r include=F}
+presentations_tb <- read.csv("../Data/Presentations.csv") %>%
+  dplyr::mutate_all(remove_commmas)
+```
+
+# Spoken
+
+```{r spoken}
+presentations_tb %>% 
+  dplyr::filter(Format != "Poster") %>%
+  dplyr::mutate(Year_Format = paste0(Format," - ",Year)) %>%
+  vitae::detailed_entries(
+    what = Author...Presenter,
+    when = Year_Format,
+    with = Title,
+    where = Host...Event,
+    .protect = TRUE)
+```
+
+# Visual
+
+```{r visual}
+presentations_tb %>% 
+  dplyr::filter(Format == "Poster") %>%
+  dplyr::mutate(Year_Format = paste0(Format," - ",Year)) %>%
+  vitae::detailed_entries(
+    what = Author...Presenter,
+    when = Year_Format,
+    with = Title,
+    where = Host...Event,
+    .protect = TRUE)
+```
