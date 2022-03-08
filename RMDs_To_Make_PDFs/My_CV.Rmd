@@ -3,6 +3,7 @@ output:
   vitae::awesomecv:
       pandoc_args: 
       - "--metadata-file=../Header/header_full.yaml"
+date: "`r format(Sys.time(), '%B %Y')`"
 ---
 
 ```{r setup, include=FALSE}
