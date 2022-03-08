@@ -5,5 +5,4 @@ address: "Orygen"
 www: orcid.org/0000-0001-7407-9194
 email: "Matthew.Hamilton@Orygen.Org.Au"
 github: matthewphamilton
-date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "000000"

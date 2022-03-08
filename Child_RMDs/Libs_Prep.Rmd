@@ -14,9 +14,23 @@ libs_tb <- tibble::tibble(Name = r_libs_chr,
                                              ~ utils::packageDescription(.x, 
                                                                              fields = "Description")),
                 Title = purrr::map_chr(.$Name,
-                                        ~ packageDescription(.x, fields = "Title")),
+                                        ~ packageDescription(.x, fields = "Title")
+                                       ),
                 Version = purrr::map_chr(.$Name,
-                                        ~ packageDescription(.x, fields = "Version")),
+                                        ~ ifelse(stringr::str_detect(citation(.x) %>% 
+                                                                            toBibtex() %>% 
+                                                                            purrr::pluck(2),"doi "),
+                                                 paste0("https://doi.org/",
+                                                 stringr::str_extract_all(citation(.x) %>% 
+                                                                            toBibtex() %>% 
+                                                                            purrr::pluck(2),
+                                                                          "(?<=\\{)[^{}]+(?=\\})")[[1]]),
+                                                 (packageDescription(.x, 
+                                                                     fields = "URL") %>%
+                                                    strsplit(","))[[1]][1]
+                                                 )
+                                        #packageDescription(.x, fields = "Version")
+                                        ),
                 Author = purrr::map_chr(.$Name,
                                         ~ get_fn_auts(.x)),
                 Repository = purrr::map_chr(.$Name,

@@ -18,5 +18,17 @@ sanitise_peer_revd_tb <- function(peer_revd_tb_spine){
 
 ```{r include=F}
 scholar_id_1L_chr = "t1ZHrCoAAAAJ"
-exclude_ids_chr = c("IjCSPb-OGe4C","0EnyYjriUFMC","kNdYIx-mwKoC","KlAtU1dfN6UC","3fE2CSJIrl8C","5nxA0vEk-isC","2osOgNQ5qMEC","Y0pCki6q_DkC","qxL8FJ1GzNcC","Tyk-4Ss8FVUC")
+exclude_ids_chr = c("IjCSPb-OGe4C",
+                    "0EnyYjriUFMC",
+                    "kNdYIx-mwKoC",
+                    "KlAtU1dfN6UC",
+                    "3fE2CSJIrl8C",
+                    "5nxA0vEk-isC",
+                    "2osOgNQ5qMEC",
+                    "Y0pCki6q_DkC",
+                    "qxL8FJ1GzNcC",
+                    "Tyk-4Ss8FVUC",
+                    "4DMP91E08xMC",
+                    "9ZlFYXVOiuMC",
+                    "L8Ckcad2t8MC")
 ```
