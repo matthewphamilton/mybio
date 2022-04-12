@@ -21,8 +21,13 @@ sanitise_fn = sanitise_peer_revd_tb)
 
 ```
 ```{r include=F}
-accepted_tb <- read.csv("../Data/accepted_tb.csv") 
+if(file.exists("../Data/accepted_tb.csv")){
+  accepted_tb <- read.csv("../Data/accepted_tb.csv") 
 accepted_tb <- accepted_tb %>% dplyr::mutate(dplyr::across(names(accepted_tb)[!names(accepted_tb) %in% c("Year","Citations","In_Press_Lgl")],as.character))
+}else{
+  accepted_tb <- NULL
+}
+
 peer_rvd_pubs_tbl <- make_peer_rvd_pubs_tbl(peer_revd_tb_spine,
                                accepted_tb = accepted_tb)
 ```
