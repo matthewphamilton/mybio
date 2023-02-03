@@ -5,7 +5,7 @@ date: "04/03/2021"
 output: html_document
 ---
 ```{r include = F}
-r_libs_chr =  c('bimp',
+r_libs_chr =  c(#'bimp',
                 "heterodox",
                 'ready4',
                 'ready4class',

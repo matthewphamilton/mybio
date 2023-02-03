@@ -30,5 +30,22 @@ exclude_ids_chr = c("IjCSPb-OGe4C",
                     "Tyk-4Ss8FVUC",
                     "4DMP91E08xMC",
                     "9ZlFYXVOiuMC",
-                    "L8Ckcad2t8MC")
+                    "L8Ckcad2t8MC",
+                    "IWHjjKOFINEC", # Put back in when there is a title
+                    "bEWYMUwI8FkC",
+                    "blknAaTinKkC",
+                    "k_IJM867U9cC",
+                    "hC7cP41nSMkC",
+                    "-f6ydRqryjwC",
+                    "hFOr9nPyWt4C",
+                    "mB3voiENLucC",
+                    "HDshCWvjkbEC",
+                    "TQgYirikUcIC",
+                    "R3hNpaxXUhUC",
+                    "e5wmG9Sq2KIC",
+                    "RHpTSmoSYBkC",
+                    "4JMBOYKVnBMC",
+                    "j3f4tGmQtD8C",
+                    "_Qo2XoVZTnwC"
+                    )
 ```
