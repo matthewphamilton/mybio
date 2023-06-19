@@ -29,6 +29,54 @@ youth mental health settings](FALSE) MB Simmons, G Chinnery, S Whitson,
 S Bostock, J Braybrook, M Hamilton, …
 </td>
 <td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2023
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Psychiatric Services** [Inequalities in access to mental health
+treatment by Australian youths during the COVID-19 pandemic](FALSE) CX
+Gao, LP McDonald, MP Hamilton, K Simons, JM Menssink, K Filia, …
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2023
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Australasian Psychiatry** [Accelerating youth mental health services
+research](FALSE) SM Cotton, KM Filia, MP Hamilton, CX Gao, JM Menssink,
+N Telford, …
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2023
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Australasian Psychiatry** [Response to Allison et al.(2022)‘Headspace
+early intervention for psychosis in Australia: Is it still a “best
+buy”?’](FALSE) E Brown, E Killackey, M Hamilton, A Thompson, P McGorry
+</td>
+<td style="text-align:right;">
 0
 </td>
 </tr>
@@ -46,7 +94,40 @@ seeking mental health support](FALSE) K Filia, J Menssink, CX Gao, D
 Rickwood, M Hamilton, SE Hetrick, …
 </td>
 <td style="text-align:right;">
-10
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2022
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Current Issues in Criminal Justice** [Providing a pathway to
+community-based psychosocial or mental health support services for young
+people following initial encounters with police: a scoping
+review](FALSE) D Baker, K Fisher, M Hamilton, S Rice, R Purcell
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2022
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Epidemiology and Psychiatric Sciences** [Heterogeneity of quality of
+life in young people attending primary mental health services](FALSE) SM
+Cotton, MP Hamilton, K Filia, JM Menssink, L Engel, C Mihalopoulos, …
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
@@ -74,10 +155,10 @@ Bailey, M Lamblin, S McKay, J Pirkis, C Mihalopoulos, …
 &nbsp;&nbsp;
 </td>
 <td style="text-align:left;">
-**Current Issues in Criminal Justice** [Providing a pathway to
-community-based psychosocial or mental health support services for young
-people following initial encounters with police: a scoping
-review](FALSE) D Baker, K Fisher, M Hamilton, S Rice, R Purcell
+**Australian & New Zealand Journal of Psychiatry** [Mental health
+systems modelling for evidence-informed service reform in
+Australia](FALSE) H Whiteford, N Bagheri, S Diminic, J Enticott, CX Gao,
+M Hamilton, …
 </td>
 <td style="text-align:right;">
 1
@@ -101,55 +182,6 @@ D Ashcroft, C Bundy, …
 </tr>
 <tr>
 <td style="text-align:left;">
-2022
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**Psychiatric Services, Appi. Ps.** [Inequalities in Access to Mental
-Health Treatment by Australian Youths During the COVID-19
-Pandemic](FALSE) CX Gao, LP McDonald, MP Hamilton, K Simons, JM
-Menssink, K Filia, …
-</td>
-<td style="text-align:right;">
-0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2022
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**PsyArXiv** [Mental health systems modelling for evidence-informed
-service reform in Australia](FALSE) H Whiteford, N Bagheri, S Diminic, J
-Enticott, CX Gao, M Hamilton, …
-</td>
-<td style="text-align:right;">
-0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2022
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**Epidemiology and Psychiatric Sciences** [Heterogeneity of quality of
-life in young people attending primary mental health services](FALSE) SM
-Cotton, MP Hamilton, K Filia, JM Menssink, L Engel, C Mihalopoulos, …
-</td>
-<td style="text-align:right;">
-0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 2021
 </td>
 <td style="text-align:left;">
@@ -161,7 +193,7 @@ when a transmission route may dominate](FALSE) CX Gao, Y Li, J Wei, S
 Cotton, M Hamilton, L Wang, BJ Cowling
 </td>
 <td style="text-align:right;">
-36
+41
 </td>
 </tr>
 <tr>
@@ -179,23 +211,7 @@ K Filia, D Rickwood, J Menssink, CX Gao, S Hetrick, A Parker, M
 Hamilton, …
 </td>
 <td style="text-align:right;">
-15
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2021
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**Clinical Psychologist** [Development of a graphic medicine-enabled
-social media-based intervention for youth social anxiety](FALSE) S Rice,
-B O’Bree, M Wilson, C McEnery, MH Lim, M Hamilton, J Gleeson, …
-</td>
-<td style="text-align:right;">
-10
+19
 </td>
 </tr>
 <tr>
@@ -212,7 +228,23 @@ miss when using it as an outcome measure?](FALSE) SM Cotton, J Menssink,
 K Filia, D Rickwood, IB Hickie, M Hamilton, …
 </td>
 <td style="text-align:right;">
-8
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Clinical Psychologist** [Development of a graphic medicine-enabled
+social media-based intervention for youth social anxiety](FALSE) S Rice,
+B O’Bree, M Wilson, C McEnery, MH Lim, M Hamilton, J Gleeson, …
+</td>
+<td style="text-align:right;">
+10
 </td>
 </tr>
 <tr>
@@ -258,23 +290,6 @@ D’Alfonso, …
 &nbsp;&nbsp;
 </td>
 <td style="text-align:left;">
-\*\*\*\* [Leveraging the social network for treatment of social anxiety:
-pilot study of a youth-specific digital intervention with a focus on
-engagement of young men. Internet Interv …](FALSE) S Rice, B O’Bree, M
-Wilson, C McEnery, MH Lim, M Hamilton, J Gleeson, …
-</td>
-<td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2021
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
 \*\*\*\* [Police diversion to community-based psychosocial or mental
 health support for young people: a scoping review protocol](FALSE) D
 Baker, K Fisher, M Hamilton, S Rice, R Purcell
@@ -297,7 +312,7 @@ with a focus on engagement of young men](FALSE) S Rice, B O’Bree, M
 Wilson, C McEnery, MH Lim, M Hamilton, J Gleeson, …
 </td>
 <td style="text-align:right;">
-36
+39
 </td>
 </tr>
 <tr>
@@ -313,7 +328,7 @@ impairments in psychosis: a systematic review and meta-analysis](FALSE)
 K Allott, K Van-Der-El, S Bryce, EM Parrish, SR McGurk, S Hetrick, …
 </td>
 <td style="text-align:right;">
-24
+33
 </td>
 </tr>
 <tr>
@@ -329,23 +344,7 @@ Barriers and enablers to service accessibility in rural settings](FALSE)
 E Dolan, K Allott, A Proposch, M Hamilton, E Killackey
 </td>
 <td style="text-align:right;">
-5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2020
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**Melbourne: Orygen and World Economic Forum** [An investment framework
-to build mental capital in young people](FALSE) D McDaid, M Hamilton, D
-King, A Park, MC Hoffmann, W Silva-Ribeiro, …
-</td>
-<td style="text-align:right;">
-4
+7
 </td>
 </tr>
 <tr>
@@ -379,7 +378,7 @@ A national survey of providers](FALSE) K Allott, K van‐der‐EL, S Bryce,
 M Hamilton, S Adams, L Burgat, …
 </td>
 <td style="text-align:right;">
-8
+9
 </td>
 </tr>
 <tr>
@@ -396,7 +395,7 @@ for depression relapse prevention in young people: pilot study of a
 S Hetrick, A Parker, R Lederman, G Wadley, …
 </td>
 <td style="text-align:right;">
-90
+99
 </td>
 </tr>
 <tr>
@@ -413,7 +412,7 @@ findings from the Pso Well® study](FALSE) A Chisholm, PA Nelson, CJ
 Pearce, AJ Littlewood, K Kane, AL Henry, …
 </td>
 <td style="text-align:right;">
-35
+36
 </td>
 </tr>
 <tr>
@@ -430,7 +429,7 @@ system](FALSE) MP Hamilton, SE Hetrick, C Mihalopoulos, D Baker, V
 Browne, …
 </td>
 <td style="text-align:right;">
-31
+33
 </td>
 </tr>
 <tr>
@@ -462,7 +461,7 @@ health clinicians](FALSE) MP Hamilton, SE Hetrick, C Mihalopoulos, D
 Baker, V Browne, …
 </td>
 <td style="text-align:right;">
-6
+7
 </td>
 </tr>
 <tr>
@@ -529,7 +528,7 @@ evaluation](FALSE) SW Grant, M Sperrin, E Carlson, N Chinai, D Ntais, M
 Hamilton, G Dunn, …
 </td>
 <td style="text-align:right;">
-24
+25
 </td>
 </tr>
 <tr>

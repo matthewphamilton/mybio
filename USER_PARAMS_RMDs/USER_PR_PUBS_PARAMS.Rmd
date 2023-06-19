@@ -18,9 +18,9 @@ sanitise_peer_revd_tb <- function(peer_revd_tb_spine){
 
 ```{r include=F}
 scholar_id_1L_chr = "t1ZHrCoAAAAJ"
-exclude_ids_chr = c("IjCSPb-OGe4C",
-                    "0EnyYjriUFMC",
-                    "kNdYIx-mwKoC",
+exclude_ids_chr = c("IjCSPb-OGe4C","hMod-77fHWUC",
+                    "0EnyYjriUFMC","7PzlFSSx8tAC",
+                    "kNdYIx-mwKoC","r0BpntZqJG4C",
                     "KlAtU1dfN6UC",
                     "3fE2CSJIrl8C",
                     "5nxA0vEk-isC",

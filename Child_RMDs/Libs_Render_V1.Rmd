@@ -5,8 +5,12 @@ date: "01/03/2021"
 output: html_document
 ---
 
-```{r software}
+#### A software framework for ethical computational modelling
+
+```{r softwarefw}
 libs_tb %>% 
+  dplyr::filter(c(rep(T,6),
+                  rep(F,length(r_libs_chr)-6))) %>%
   dplyr::mutate(Name_title = paste0(Name,
                                         " - ",
                                         Title)) %>%
@@ -17,3 +21,20 @@ libs_tb %>%
                           .protect = TRUE)
 ```  
 
+&nbsp;
+
+#### Modelling the people, places, platforms and programs important to youth mental health
+
+```{r softwaremod}
+libs_tb %>% 
+  dplyr::filter(c(rep(F,6),
+                  rep(T,length(r_libs_chr)-6))) %>%
+  dplyr::mutate(Name_title = paste0(Name,
+                                        " - ",
+                                        Title)) %>%
+  vitae::detailed_entries(what = Author,
+                          when = Date,
+                          with = Name_title,
+                          where = Version,
+                          .protect = TRUE)
+```  

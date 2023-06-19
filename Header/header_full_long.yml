@@ -1,10 +1,10 @@
 name: Matthew
 surname: Hamilton
-aboutme: "I am a research economist at Orygen, working to achieve better mental health outcomes for young people. My main focus is improving the quality and usefulness of mental health mathematical models through adopting modular, replicable and generalisable methods."
+aboutme: "I am a PhD candidate at Monash University. My main focus is improving the quality and usefulness of mental health mathematical models through adopting modular, replicable and generalisable methods."
 position: "Economist and mental health modeller"
 address: "Orygen"
 www: orcid.org/0000-0001-7407-9194
-email: "Matthew.Hamilton@Orygen.Org.Au"
+email: "Matthew.Hamilton1@Monash.Edu"
 github: matthewphamilton
 linkedin: matthewhamiltonprofile
 date: "`r format(Sys.time(), '%B %Y')`"

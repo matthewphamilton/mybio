@@ -5,19 +5,20 @@ date: "04/03/2021"
 output: html_document
 ---
 ```{r include = F}
-r_libs_chr =  c(#'bimp',
-                "heterodox",
-                'ready4',
+r_libs_chr =  c('ready4',
                 'ready4class',
                 'ready4fun',
                 'ready4pack',
                 'ready4show',
                 'ready4use',
+                'aus',
+                #'bimp',
+                'heterodox',
                 'scorz',
                 "specific",
                 'TTU',
+                'vicinity',
                 'youthu',
-                'youthvars'
-                )
+                'youthvars')
 ```
 

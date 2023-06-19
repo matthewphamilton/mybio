@@ -5,6 +5,8 @@ date: "04/03/2021"
 output: html_document
 ---
 
-For details about where to find documentation and installation instructions for the software I develop, visit:
+All software itemised in this section is documented at:
 
 https://www.ready4-dev.com
+
+&nbsp;

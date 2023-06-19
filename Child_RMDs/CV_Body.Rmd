@@ -21,13 +21,25 @@ output: html_document
 ```{r child="Non_PR_Body.Rmd", echo=FALSE}
 ```
 
-# Software
+# Scientific Software
+
+## Documentation
 ```{r child="../USER_PARAMS_RMDs/USER_SOFTWARE_INTRO.Rmd", echo=FALSE}
 ```
 
 ## R Code Libraries
 ```{r child="Libs_Body.Rmd", echo=FALSE}
 ```
+
+&nbsp;
+
+## Executables & User Interfaces
+
+Programs (study design and analysis):  https://www.ready4-dev.com/docs/software/executables/programs/
+
+Subroutines (reporting templates): https://www.ready4-dev.com/docs/software/executables/subroutines/
+
+User-interfaces (interactivity): https://www.ready4-dev.com/docs/software/user-interfaces/
 
 # Presentations
 ```{r child="Talks_Body.Rmd", echo=FALSE}
