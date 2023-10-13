@@ -1,10 +1,10 @@
 name: Matthew
 surname: Hamilton
-aboutme: "I am a PhD candidate at Monash University. My main focus is improving the quality and usefulness of mental health mathematical models through adopting modular, replicable and generalisable methods."
-position: "Economist and mental health modeller"
-address: "Orygen"
+aboutme: "I am a Research Fellow and PhD candidate at Monash University. My main focus is improving the quality and usefulness of health economic computational models through adopting modular, replicable and transferable methods."
+position: "Research Fellow"
+address: "Monash University Health Economics Group"
 www: orcid.org/0000-0001-7407-9194
-email: "Matthew.Hamilton1@Monash.Edu"
+email: "Matthew.Hamilton2@Monash.Edu"
 github: matthewphamilton
 linkedin: matthewhamiltonprofile
 date: "`r format(Sys.time(), '%B %Y')`"

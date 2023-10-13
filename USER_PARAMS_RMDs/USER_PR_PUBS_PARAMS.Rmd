@@ -46,6 +46,8 @@ exclude_ids_chr = c("IjCSPb-OGe4C","hMod-77fHWUC",
                     "RHpTSmoSYBkC",
                     "4JMBOYKVnBMC",
                     "j3f4tGmQtD8C",
-                    "_Qo2XoVZTnwC"
+                    "_Qo2XoVZTnwC",
+                    "dhFuZR0502QC",
+                    "BqipwSGYUEgC"
                     )
 ```

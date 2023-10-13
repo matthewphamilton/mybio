@@ -5,7 +5,7 @@ date: "01/03/2021"
 output: html_document
 ---
 
-#### A software framework for ethical computational modelling
+#### A prototype software framework for transparent, reusable and updatable health economic models
 
 ```{r softwarefw}
 libs_tb %>% 
@@ -23,7 +23,7 @@ libs_tb %>%
 
 &nbsp;
 
-#### Modelling the people, places, platforms and programs important to youth mental health
+#### Modules of an open source economic model of youth mental health
 
 ```{r softwaremod}
 libs_tb %>% 
