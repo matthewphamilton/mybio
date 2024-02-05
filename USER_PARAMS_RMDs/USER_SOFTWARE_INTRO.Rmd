@@ -7,6 +7,6 @@ output: html_document
 
 I have documented the software itemised in this section at:
 
-https://www.ready4-dev.com
+https://ready4-dev.com and https://readyforwhatsnext.org/
 
 &nbsp;

@@ -18,7 +18,8 @@ sanitise_peer_revd_tb <- function(peer_revd_tb_spine){
 
 ```{r include=F}
 scholar_id_1L_chr = "t1ZHrCoAAAAJ"
-exclude_ids_chr = c("IjCSPb-OGe4C","hMod-77fHWUC",
+exclude_ids_chr = c("SeFeTyx0c_EC","NaGl4SEjCO4C","70eg2SAEIzsC","vV6vV6tmYwMC","pqnbT2bcN3wC","g5m5HwL7SMYC","M05iB0D1s5AC","ldfaerwXgEUC","lSLTfruPkqcC","J_g5lzvAfSwC","ns9cj8rnVeAC","HoB7MX3m0LUC","35N4QoGY0k4C","O3NaXMp0MMsC","2P1L_qKh6hAC", "RYcK_YlVTxYC", "RGFaLdJalmkC","GnPB-g6toBAC",
+                    "IjCSPb-OGe4C","hMod-77fHWUC",
                     "0EnyYjriUFMC","7PzlFSSx8tAC",
                     "kNdYIx-mwKoC","r0BpntZqJG4C",
                     "KlAtU1dfN6UC",
@@ -49,5 +50,5 @@ exclude_ids_chr = c("IjCSPb-OGe4C","hMod-77fHWUC",
                     "_Qo2XoVZTnwC",
                     "dhFuZR0502QC",
                     "BqipwSGYUEgC"
-                    )
+                    ) %>% unique()
 ```

@@ -28,7 +28,7 @@ treatment by Australian youths during the COVID-19 pandemic](FALSE) CX
 Gao, LP McDonald, MP Hamilton, K Simons, JM Menssink, K Filia, …
 </td>
 <td style="text-align:right;">
-7
+5
 </td>
 </tr>
 <tr>
@@ -45,40 +45,7 @@ youth mental health settings](FALSE) MB Simmons, G Chinnery, S Whitson,
 S Bostock, J Braybrook, M Hamilton, …
 </td>
 <td style="text-align:right;">
-7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2023
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**Australian & New Zealand Journal of Psychiatry** [Mental health
-systems modelling for evidence-informed service reform in
-Australia](FALSE) H Whiteford, N Bagheri, S Diminic, J Enticott, CX Gao,
-M Hamilton, …
-</td>
-<td style="text-align:right;">
-6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2023
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**Australasian Psychiatry** [Accelerating youth mental health services
-research](FALSE) SM Cotton, KM Filia, MP Hamilton, CX Gao, JM Menssink,
-N Telford, …
-</td>
-<td style="text-align:right;">
-2
+5
 </td>
 </tr>
 <tr>
@@ -99,6 +66,22 @@ buy”?’](FALSE) E Brown, E Killackey, M Hamilton, A Thompson, P McGorry
 </tr>
 <tr>
 <td style="text-align:left;">
+2023
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Australasian Psychiatry** [Accelerating youth mental health services
+research](FALSE) SM Cotton, KM Filia, MP Hamilton, CX Gao, JM Menssink,
+N Telford, …
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 2022
 </td>
 <td style="text-align:left;">
@@ -111,7 +94,7 @@ seeking mental health support](FALSE) K Filia, J Menssink, CX Gao, D
 Rickwood, M Hamilton, SE Hetrick, …
 </td>
 <td style="text-align:right;">
-19
+15
 </td>
 </tr>
 <tr>
@@ -129,6 +112,23 @@ Bailey, M Lamblin, S McKay, J Pirkis, C Mihalopoulos, …
 </td>
 <td style="text-align:right;">
 4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2022
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**Australian & New Zealand Journal of Psychiatry** [Mental health
+systems modelling for evidence-informed service reform in
+Australia](FALSE) H Whiteford, N Bagheri, S Diminic, J Enticott, CX Gao,
+M Hamilton, …
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 <tr>
@@ -193,7 +193,7 @@ when a transmission route may dominate](FALSE) CX Gao, Y Li, J Wei, S
 Cotton, M Hamilton, L Wang, BJ Cowling
 </td>
 <td style="text-align:right;">
-53
+44
 </td>
 </tr>
 <tr>
@@ -228,7 +228,7 @@ miss when using it as an outcome measure?](FALSE) SM Cotton, J Menssink,
 K Filia, D Rickwood, IB Hickie, M Hamilton, …
 </td>
 <td style="text-align:right;">
-15
+13
 </td>
 </tr>
 <tr>
@@ -244,7 +244,7 @@ social media-based intervention for youth social anxiety](FALSE) S Rice,
 B O’Bree, M Wilson, C McEnery, MH Lim, M Hamilton, J Gleeson, …
 </td>
 <td style="text-align:right;">
-12
+11
 </td>
 </tr>
 <tr>
@@ -261,7 +261,7 @@ of Australian youth mental health clinicians](FALSE) G Delagneau, SC
 Bowden, K van-der-EL, S Bryce, M Hamilton, S Adams, …
 </td>
 <td style="text-align:right;">
-4
+3
 </td>
 </tr>
 <tr>
@@ -279,7 +279,7 @@ health](FALSE) MB Simmons, J Nicholas, G Chinnery, S O’Sullivan, S
 D’Alfonso, …
 </td>
 <td style="text-align:right;">
-2
+1
 </td>
 </tr>
 <tr>
@@ -296,7 +296,7 @@ with a focus on engagement of young men](FALSE) S Rice, B O’Bree, M
 Wilson, C McEnery, MH Lim, M Hamilton, J Gleeson, …
 </td>
 <td style="text-align:right;">
-48
+45
 </td>
 </tr>
 <tr>
@@ -312,7 +312,7 @@ impairments in psychosis: a systematic review and meta-analysis](FALSE)
 K Allott, K Van-Der-El, S Bryce, EM Parrish, SR McGurk, S Hetrick, …
 </td>
 <td style="text-align:right;">
-44
+38
 </td>
 </tr>
 <tr>
@@ -345,7 +345,7 @@ services](FALSE) G Delagneau, SC Bowden, S Bryce, K van‐der‐EL, M
 Hamilton, S Adams, …
 </td>
 <td style="text-align:right;">
-6
+5
 </td>
 </tr>
 <tr>
@@ -362,7 +362,7 @@ A national survey of providers](FALSE) K Allott, K van‐der‐EL, S Bryce,
 M Hamilton, S Adams, L Burgat, …
 </td>
 <td style="text-align:right;">
-11
+10
 </td>
 </tr>
 <tr>
@@ -379,24 +379,7 @@ for depression relapse prevention in young people: pilot study of a
 S Hetrick, A Parker, R Lederman, G Wadley, …
 </td>
 <td style="text-align:right;">
-107
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-2017
-</td>
-<td style="text-align:left;">
-&nbsp;&nbsp;
-</td>
-<td style="text-align:left;">
-**British Journal of Dermatology** [Motivational interviewing‐based
-training enhances clinicians’ skills and knowledge in psoriasis:
-findings from the Pso Well® study](FALSE) A Chisholm, PA Nelson, CJ
-Pearce, AJ Littlewood, K Kane, AL Henry, …
-</td>
-<td style="text-align:right;">
-41
+101
 </td>
 </tr>
 <tr>
@@ -411,6 +394,23 @@ Pearce, AJ Littlewood, K Kane, AL Henry, …
 may improve cost‐effectiveness in the youth mental health service
 system](FALSE) MP Hamilton, SE Hetrick, C Mihalopoulos, D Baker, V
 Browne, …
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017
+</td>
+<td style="text-align:left;">
+&nbsp;&nbsp;
+</td>
+<td style="text-align:left;">
+**British Journal of Dermatology** [Motivational interviewing‐based
+training enhances clinicians’ skills and knowledge in psoriasis:
+findings from the Pso Well® study](FALSE) A Chisholm, PA Nelson, CJ
+Pearce, AJ Littlewood, K Kane, AL Henry, …
 </td>
 <td style="text-align:right;">
 36
@@ -508,7 +508,7 @@ Hamilton
 **Health Technology Assessment** [Calculating when elective abdominal
 aortic aneurysm repair improves survival for individual patients:
 development of the Aneurysm Repair Decision Aid and economic
-evaluation.](FALSE) SW Grant, M Sperrin, E Carlson, N Chinai, D Ntais, M
+evaluation](FALSE) SW Grant, M Sperrin, E Carlson, N Chinai, D Ntais, M
 Hamilton, G Dunn, …
 </td>
 <td style="text-align:right;">
@@ -528,7 +528,7 @@ systematic review of full economic evaluations](FALSE) MP Hamilton, D
 Ntais, CEM Griffiths, LM Davies, …
 </td>
 <td style="text-align:right;">
-14
+13
 </td>
 </tr>
 <tr>

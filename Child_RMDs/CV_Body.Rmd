@@ -22,24 +22,27 @@ output: html_document
 ```
 
 # Scientific Software
-
-## Documentation
-```{r child="../USER_PARAMS_RMDs/USER_SOFTWARE_INTRO.Rmd", echo=FALSE}
+```{r child="Software_Body.Rmd", echo=FALSE}
 ```
+<!-- ## Documentation -->
+<!-- ```{r child="../USER_PARAMS_RMDs/USER_SOFTWARE_INTRO.Rmd", echo=FALSE} -->
+<!-- ``` -->
 
-## R Code Libraries
-```{r child="Libs_Body.Rmd", echo=FALSE}
-```
+<!-- ## R Code Libraries -->
+<!-- # ```{r child="Libs_Body.Rmd", echo=FALSE} -->
+<!-- # ``` -->
 
-&nbsp;
+<!-- &nbsp; -->
 
-## Executables & User Interfaces
+<!-- ## Executables & User Interfaces -->
 
-Programs (study design and analysis):  https://www.ready4-dev.com/docs/software/executables/programs/
+<!-- Programs (study design and analysis):  https://readyforwhatsnext.org/docs/analyses/find/ -->
 
-Subroutines (reporting templates): https://www.ready4-dev.com/docs/software/executables/subroutines/
+<!-- Subroutines (reporting templates): https://readyforwhatsnext.org/docs/reporting/ -->
 
-User-interfaces (interactivity): https://www.ready4-dev.com/docs/software/user-interfaces/
+<!-- User-interfaces (interactivity): https://readyforwhatsnext.org/docs/decision-aids/ -->
+
+\newpage
 
 # Presentations
 ```{r child="Talks_Body.Rmd", echo=FALSE}
@@ -48,6 +51,8 @@ User-interfaces (interactivity): https://www.ready4-dev.com/docs/software/user-i
 # Grants
 ```{r child="Grants_Body.Rmd", echo=FALSE}
 ```
+
+\newpage
 
 # Teaching
 ```{r child="Teaching_Body.Rmd", echo=FALSE}

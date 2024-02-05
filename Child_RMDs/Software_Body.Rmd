@@ -1,0 +1,18 @@
+---
+title: "Libs_Body"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+
+
+```{r child="Libs_Prep.Rmd", echo=FALSE}
+```
+
+```{r child="Software_Render_01.Rmd", echo=FALSE}
+```
+
+&nbsp;
+
+```{r child="Software_Render_02.Rmd", echo=FALSE}
+```

@@ -1,0 +1,33 @@
+---
+title: "Libs_Render_V1"
+author: "Matthew Hamilton"
+date: "01/03/2021"
+output: html_document
+---
+
+
+## readyforwhatsnext - an open source economic model of youth mental health
+
+The readyforwhatsnext model is documented at https://readyforwhatsnext.org/.
+
+Currently available R libraries that implement the readyforwhatsnext model are listed below and also at https://readyforwhatsnext.org/docs/tutorials/finding/libraries/.
+
+```{r softwaremod}
+libs_tb %>% 
+  dplyr::filter(c(rep(F,6),
+                  rep(T,length(r_libs_chr)-6))) %>%
+  dplyr::mutate(Name_title = paste0(Name,
+                                        " - ",
+                                        Title)) %>%
+  vitae::detailed_entries(what = Author,
+                          when = Date,
+                          with = Name_title,
+                          where = Version,
+                          .protect = TRUE)
+```  
+
+Replication programs for study design and analysis are detailed at:  https://readyforwhatsnext.org/docs/analyses/find/
+
+Study reporting templates (subroutines) are detailed at: https://readyforwhatsnext.org/docs/reporting/
+
+User-interfaces are described at: https://readyforwhatsnext.org/docs/decision-aids/

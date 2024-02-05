@@ -1,0 +1,23 @@
+---
+output: 
+  vitae::awesomecv:
+      pandoc_args: 
+      - "--metadata-file=../Header/header_full.yaml"
+date: "`r format(Sys.time(), '%B %Y')`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+```{r child="../Child_RMDs/Functions.Rmd", echo=FALSE}
+```
+
+# Qualifications
+```{r child="../Child_RMDs/Quals_Body.Rmd", echo=FALSE}
+```  
+
+# Employment and Appointments
+```{r child="../Child_RMDs/Jobs_Body.Rmd", echo=FALSE}
+``` 
